@@ -59,7 +59,7 @@ class SelecterVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // hide bavigationBar
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
