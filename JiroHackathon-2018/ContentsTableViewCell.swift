@@ -9,7 +9,7 @@ class ContentsTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         iconImageView = UIImageView()
-        iconImageView.image = UIImage(named: "loading")
+        iconImageView.image = UIImage(named: "noimage")
         nameLabel = UILabel()
     }
     
