@@ -2,6 +2,14 @@ import UIKit
 import SCLAlertView
 
 class DetailVC: UIViewController {
+    
+
+    var kingakuStr:String = "¥4500"
+    var ninnikuStr:String = "サポーターズ産、一年にんにく"
+    var yasaiStr:String = "レバレジーズ産、ヒカリエ野菜"
+    var butaStr:String = "クックパッド産、ガーデン豚"
+    var syoyuStr:String = "サイバー産、キラキラ醤油"
+    var menStr:String = "コロプラ産、もちもち麺"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +34,7 @@ class DetailVC: UIViewController {
         priceLabel.frame = CGRect(x: 0, y: contentsHeight * 0.42, width: viewWidth, height:  contentsHeight * 0.08)
         priceLabel.font = UIFont.boldSystemFont(ofSize: 42)
         priceLabel.textColor = UIColor.black
-        priceLabel.text = "¥4500"
+        priceLabel.text = kingakuStr
         priceLabel.textAlignment = NSTextAlignment.center
         self.view.addSubview(priceLabel)
         
@@ -34,7 +42,7 @@ class DetailVC: UIViewController {
         garlicLabel.frame = CGRect(x: 0, y: contentsHeight * 0.50, width: viewWidth, height: contentsHeight * 0.06)
         garlicLabel.font = UIFont.boldSystemFont(ofSize: 24)
         garlicLabel.textColor = UIColor.black
-        garlicLabel.text = "サポーターズ産、一年にんにく"
+        garlicLabel.text = ninnikuStr
         garlicLabel.textAlignment = .center
         self.view.addSubview(garlicLabel)
         
@@ -42,7 +50,7 @@ class DetailVC: UIViewController {
         vegetablesLabel.frame = CGRect(x: 0, y: contentsHeight * 0.58, width: viewWidth, height: contentsHeight * 0.06)
         vegetablesLabel.font = UIFont.boldSystemFont(ofSize: 24)
         vegetablesLabel.textColor = UIColor.black
-        vegetablesLabel.text = "レバレジーズ産、ヒカリエ野菜"
+        vegetablesLabel.text = yasaiStr
         vegetablesLabel.textAlignment = .center
         self.view.addSubview(vegetablesLabel)
         
@@ -50,7 +58,7 @@ class DetailVC: UIViewController {
         porkLabel.frame = CGRect(x: 0, y: contentsHeight * 0.66, width: viewWidth, height: contentsHeight * 0.06)
         porkLabel.font = UIFont.boldSystemFont(ofSize: 24)
         porkLabel.textColor = UIColor.black
-        porkLabel.text = "クックパッド産、ガーデン豚"
+        porkLabel.text = butaStr
         porkLabel.textAlignment = .center
         self.view.addSubview(porkLabel)
         
@@ -59,7 +67,7 @@ class DetailVC: UIViewController {
         soyLabel.font = UIFont.boldSystemFont(ofSize: 24)
         soyLabel.textColor = UIColor.black
         soyLabel.textAlignment = .center
-        soyLabel.text = "サイバー産、キラキラ醤油"
+        soyLabel.text = syoyuStr
         self.view.addSubview(soyLabel)
         
         let menLabel = UILabel()
@@ -67,7 +75,7 @@ class DetailVC: UIViewController {
         menLabel.font = UIFont.boldSystemFont(ofSize: 24)
         menLabel.textColor = UIColor.black
         menLabel.textAlignment = .center
-        menLabel.text = "コロプラ産、もちもち麺"
+        menLabel.text = menStr
         self.view.addSubview(menLabel)
         
         //購入ボタン

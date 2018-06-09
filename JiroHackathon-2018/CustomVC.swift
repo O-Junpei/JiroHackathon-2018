@@ -12,7 +12,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     private var syokuzaiTableView: UITableView!
     
     //テーブルビューに表示する配列
-    private var myItems: Array = [["にんにく", ""], ["野菜", ""], ["豚肉", ""], ["醤油",""], ["麺",""]]
+    private var contentsItems: Array = [["にんにく", ""], ["野菜", ""], ["豚肉", ""], ["醤油",""], ["麺",""]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,11 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     
     @objc internal func goBuyView(sender: UIButton){
         let detailVC:DetailVC = DetailVC()
+        detailVC.ninnikuStr = contentsItems[0][0]
+        detailVC.yasaiStr = contentsItems[1][0]
+        detailVC.butaStr = contentsItems[2][0]
+        detailVC.syoyuStr = contentsItems[3][0]
+        detailVC.menStr = contentsItems[4][0]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 
@@ -67,7 +72,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     //MARK: テーブルビューのセルの数を設定する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //テーブルビューのセルの数はmyItems配列の数とした
-        return self.myItems.count
+        return self.contentsItems.count
     }
     
     //MARK: テーブルビューのセルの中身を設定する
@@ -75,10 +80,10 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         //myItems配列の中身をテキストにして登録した
         let cell:ContentsTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ContentsTableViewCell.self))! as! ContentsTableViewCell
         
-        cell.nameLabel.text = myItems[indexPath.row][0]
+        cell.nameLabel.text = contentsItems[indexPath.row][0]
         
-        if !myItems[indexPath.row][1].isEmpty {
-            let url = URL(string: myItems[indexPath.row][1])!
+        if !contentsItems[indexPath.row][1].isEmpty {
+            let url = URL(string: contentsItems[indexPath.row][1])!
             cell.iconImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "loading"))
         }
         
@@ -104,8 +109,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
                     for i in 0..<json.count {
                         print("i: \(i)")
                         alertView.addButton(json[i]["name"].stringValue) {
-                            self.myItems[0][0] = json[i]["name"].stringValue
-                            self.myItems[0][1] = json[i]["image_url"].stringValue
+                            self.contentsItems[0][0] = json[i]["name"].stringValue
+                            self.contentsItems[0][1] = json[i]["image_url"].stringValue
                             self.syokuzaiTableView.reloadData()
                         }
                     }
@@ -129,8 +134,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
                     for i in 0..<json.count {
                         print("i: \(i)")
                         alertView.addButton(json[i]["name"].stringValue) {
-                            self.myItems[1][0] = json[i]["name"].stringValue
-                            self.myItems[1][1] = json[i]["image_url"].stringValue
+                            self.contentsItems[1][0] = json[i]["name"].stringValue
+                            self.contentsItems[1][1] = json[i]["image_url"].stringValue
                             self.syokuzaiTableView.reloadData()
                         }
                     }
@@ -153,8 +158,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
                     for i in 0..<json.count {
                         print("i: \(i)")
                         alertView.addButton(json[i]["name"].stringValue) {
-                            self.myItems[2][0] = json[i]["name"].stringValue
-                            self.myItems[2][1] = json[i]["image_url"].stringValue
+                            self.contentsItems[2][0] = json[i]["name"].stringValue
+                            self.contentsItems[2][1] = json[i]["image_url"].stringValue
                             self.syokuzaiTableView.reloadData()
                         }
                     }
@@ -177,8 +182,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
                     for i in 0..<json.count {
                         print("i: \(i)")
                         alertView.addButton(json[i]["name"].stringValue) {
-                            self.myItems[3][0] = json[i]["name"].stringValue
-                            self.myItems[3][1] = json[i]["image_url"].stringValue
+                            self.contentsItems[3][0] = json[i]["name"].stringValue
+                            self.contentsItems[3][1] = json[i]["image_url"].stringValue
                             self.syokuzaiTableView.reloadData()
                         }
                     }
@@ -201,8 +206,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
                     for i in 0..<json.count {
                         print("i: \(i)")
                         alertView.addButton(json[i]["name"].stringValue) {
-                            self.myItems[4][0] = json[i]["name"].stringValue
-                            self.myItems[4][1] = json[i]["image_url"].stringValue
+                            self.contentsItems[4][0] = json[i]["name"].stringValue
+                            self.contentsItems[4][1] = json[i]["image_url"].stringValue
                             self.syokuzaiTableView.reloadData()
                         }
                     }
