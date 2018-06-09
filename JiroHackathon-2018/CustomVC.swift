@@ -93,7 +93,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         switch indexPath.row {
         case 0:
             //にんにく
-            let url:String = "http://192.168.138.131:3000/search/genres?genre_id=0"
+            let url:String = HEROKU_URL + "/search/genres?genre_id=0"
             Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                 
                 switch response.result {
@@ -118,7 +118,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
             
         case 1:
             //野菜
-            let url:String = "http://192.168.138.131:3000/search/genres?genre_id=4"
+            let url:String = HEROKU_URL + "/search/genres?genre_id=4"
             Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                 
                 switch response.result {
@@ -142,7 +142,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
             }
         case 2:
             //豚肉
-            let url:String = "http://192.168.138.131:3000/search/genres?genre_id=2"
+            let url:String = HEROKU_URL + "/search/genres?genre_id=2"
             Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                 
                 switch response.result {
@@ -166,7 +166,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
             }
         case 3:
             //醤油
-            let url:String = "http://192.168.138.131:3000/search/genres?genre_id=5"
+            let url:String = HEROKU_URL + "/search/genres?genre_id=5"
             Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                 
                 switch response.result {
@@ -190,7 +190,7 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
             }
         case 4:
             //醤油
-            let url:String = "http://192.168.138.131:3000/search/genres?genre_id=6"
+            let url:String = HEROKU_URL + "/search/genres?genre_id=6"
             Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                 
                 switch response.result {

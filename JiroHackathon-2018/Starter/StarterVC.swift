@@ -34,7 +34,7 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
 
         //お天気APIから東京の天気を取得する
-        let url:String = "https://jirozon.herokuapp.com/starter/list"
+        let url:String = HEROKU_URL + "/starter/list"
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
 
             switch response.result {

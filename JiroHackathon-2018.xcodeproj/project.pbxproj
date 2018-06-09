@@ -22,6 +22,7 @@
 		8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */; };
 		8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */; };
 		8D2EBCEC20CBB67F00CAC653 /* ContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */; };
+		8D2EBCEE20CBBCED00CAC653 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCED20CBBCED00CAC653 /* Config.swift */; };
 		C70AA4A2050BEB14000A2956 /* Pods_JiroHackathon_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0691F650844FCA629107C469 /* Pods_JiroHackathon_2018UITests.framework */; };
 		D8ABC0A7035BD60172BC1266 /* Pods_JiroHackathon_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
+		8D2EBCED20CBBCED00CAC653 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 		8D2EBCAC20CB695900CAC653 /* JiroHackathon-2018 */ = {
 			isa = PBXGroup;
 			children = (
+				8D2EBCED20CBBCED00CAC653 /* Config.swift */,
 				8D2EBCAD20CB695900CAC653 /* AppDelegate.swift */,
 				8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */,
 				8D2EBCDB20CB740800CAC653 /* Top */,
@@ -433,6 +436,7 @@
 				8D2EBCAE20CB695900CAC653 /* AppDelegate.swift in Sources */,
 				8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */,
 				8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */,
+				8D2EBCEE20CBBCED00CAC653 /* Config.swift in Sources */,
 				8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */,
 				8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */,
 			);
