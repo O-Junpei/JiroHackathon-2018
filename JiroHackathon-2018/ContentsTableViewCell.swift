@@ -1,15 +1,15 @@
+
 import UIKit
 
-class StarterTableViewCell: UITableViewCell {
+class ContentsTableViewCell: UITableViewCell {
 
     var iconImageView:UIImageView!
-    var kingakuLabel:UILabel!
     var nameLabel:UILabel!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         iconImageView = UIImageView()
-        kingakuLabel = UILabel()
+        iconImageView.image = UIImage(named: "loading")
         nameLabel = UILabel()
     }
     
@@ -30,25 +30,18 @@ class StarterTableViewCell: UITableViewCell {
         // height 100
         //timeLabel
         iconImageView.frame = CGRect(x: 8, y: 8, width: height - 16, height: height - 16)
-        //iconImageView.image = UIImage(named: "jiro_sample")
         self.addSubview(iconImageView)
         
-        //
-        kingakuLabel.frame = CGRect(x: 108, y: 8, width: width - 110, height: 42)
-        kingakuLabel.font = UIFont.boldSystemFont(ofSize: 42)
-        kingakuLabel.textColor = UIColor.black
-        //kingakuLabel.text = "¥4500"
-        kingakuLabel.textAlignment = NSTextAlignment.left
-        self.addSubview(kingakuLabel)
         
         //
-        nameLabel.frame = CGRect(x: 108, y: 50, width: width - 110, height: 42)
+        nameLabel.frame = CGRect(x: 108, y: 29, width: width - 110, height: 42)
         nameLabel.font = UIFont.boldSystemFont(ofSize: 42)
         nameLabel.textColor = UIColor.black
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.minimumScaleFactor = 0.8
-        //nameLabel.text = "中山二郎風"
         nameLabel.textAlignment = NSTextAlignment.left
+        //nameLabel.text = "adada"
         self.addSubview(nameLabel)
     }
+
 }
