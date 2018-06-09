@@ -71,6 +71,7 @@ class ExpensiveVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @objc internal func goBuyView(sender: UIButton){
         let detailVC:DetailVC = DetailVC()
+        detailVC.kingakuStr = "¥10000"
         detailVC.ninnikuStr = "高級なにんにく"
         detailVC.yasaiStr = "高級な豚"
         detailVC.butaStr = "高級な豚"

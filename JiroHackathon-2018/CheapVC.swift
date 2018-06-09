@@ -72,6 +72,7 @@ class CheapVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @objc internal func goBuyView(sender: UIButton){
         let detailVC:DetailVC = DetailVC()
+        detailVC.kingakuStr = "¥1880"
         detailVC.ninnikuStr = "庶民のにんにく"
         detailVC.yasaiStr = "庶民の豚"
         detailVC.butaStr = "庶民の豚"
