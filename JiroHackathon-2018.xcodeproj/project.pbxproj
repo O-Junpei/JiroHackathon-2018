@@ -21,6 +21,8 @@
 		8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE320CB808D00CAC653 /* DetailVC.swift */; };
 		8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */; };
 		8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */; };
+		8D2EBCEC20CBB67F00CAC653 /* ContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */; };
+		8D2EBCEE20CBBCED00CAC653 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCED20CBBCED00CAC653 /* Config.swift */; };
 		C70AA4A2050BEB14000A2956 /* Pods_JiroHackathon_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0691F650844FCA629107C469 /* Pods_JiroHackathon_2018UITests.framework */; };
 		C806CD2720CBB45A00891920 /* SelecterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806CD2620CBB45A00891920 /* SelecterVC.swift */; };
 		C806CD2920CBB46800891920 /* SelecterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806CD2820CBB46800891920 /* SelecterTableViewCell.swift */; };
@@ -79,6 +81,8 @@
 		C806CD2A20CBBAD800891920 /* CheapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapVC.swift; sourceTree = "<group>"; };
 		C806CD2C20CBBAEF00891920 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
 		C806CD2E20CBBB0C00891920 /* ExpensiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensiveVC.swift; sourceTree = "<group>"; };
+		8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
+		8D2EBCED20CBBCED00CAC653 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,10 +164,13 @@
 			isa = PBXGroup;
 			children = (
 				C806CD2520CBB44A00891920 /* Selecter */,
+				8D2EBCED20CBBCED00CAC653 /* Config.swift */,
 				8D2EBCAD20CB695900CAC653 /* AppDelegate.swift */,
+				8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */,
 				8D2EBCDB20CB740800CAC653 /* Top */,
 				8D2EBCE520CB810C00CAC653 /* Starter */,
 				8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */,
+				8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */,
 				8D2EBCE820CBAB2100CAC653 /* Detail */,
 				8D2EBCB120CB695900CAC653 /* Main.storyboard */,
 				8D2EBCB420CB695A00CAC653 /* Assets.xcassets */,
@@ -216,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				8D2EBCE320CB808D00CAC653 /* DetailVC.swift */,
-				8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -451,10 +457,12 @@
 				C806CD2920CBB46800891920 /* SelecterTableViewCell.swift in Sources */,
 				C806CD2B20CBBAD800891920 /* CheapVC.swift in Sources */,
 				8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */,
+				8D2EBCEC20CBB67F00CAC653 /* ContentsTableViewCell.swift in Sources */,
 				8D2EBCAE20CB695900CAC653 /* AppDelegate.swift in Sources */,
 				8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */,
 				8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */,
 				C806CD2F20CBBB0C00891920 /* ExpensiveVC.swift in Sources */,
+				8D2EBCEE20CBBCED00CAC653 /* Config.swift in Sources */,
 				8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */,
 				C806CD2D20CBBAEF00891920 /* GeneralVC.swift in Sources */,
 				C806CD2720CBB45A00891920 /* SelecterVC.swift in Sources */,
