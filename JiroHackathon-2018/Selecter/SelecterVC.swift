@@ -2,20 +2,22 @@ import UIKit
 
 class SelecterVC: UIViewController {
     
-    var viewWidth:CGFloat!
-    var viewHeight:CGFloat!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewWidth = self.view.frame.width
-        viewHeight = self.view.frame.height
+        self.title = "コース一覧"
+        
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+        let navigationBarHeight = (self.navigationController?.navigationBar.frame.size.height)!
+        let viewWidth = self.view.frame.width
+        let viewHeight = self.view.frame.height
+        let contentsHeight = viewHeight - statusBarHeight - navigationBarHeight
         
         //self.view.backgroundColor = UIColor.init(named: "main")
         
         //庶民コース
         let cheapBtn = TopBtn()
-        cheapBtn.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight * 0.33)
+        cheapBtn.frame = CGRect(x: 0, y: 0, width: viewWidth, height: contentsHeight * 0.33)
         cheapBtn.backgroundColor = .white
         cheapBtn.addTarget(self, action: #selector(goCheap(sender:)), for:.touchUpInside)
         cheapBtn.pageTitleLabel.text = "庶民コース"
@@ -24,7 +26,7 @@ class SelecterVC: UIViewController {
         
         //一般コース
         let generalBtn = TopBtn()
-        generalBtn.frame = CGRect(x: 0, y: viewHeight * 0.3, width: viewWidth, height: viewHeight * 0.33)
+        generalBtn.frame = CGRect(x: 0, y: contentsHeight * 0.33, width: viewWidth, height: contentsHeight * 0.34)
         generalBtn.backgroundColor = UIColor.init(named: "main")
         generalBtn.addTarget(self, action: #selector(goGeneral(sender:)), for:.touchUpInside)
         generalBtn.pageTitleLabel.text = "一般コース"
@@ -33,7 +35,7 @@ class SelecterVC: UIViewController {
         
         //高級コース
         let expensiveBtn = TopBtn()
-        expensiveBtn.frame = CGRect(x: 0, y: viewHeight * 0.66, width: viewWidth, height: viewHeight * 0.33)
+        expensiveBtn.frame = CGRect(x: 0, y: contentsHeight * 0.67, width: viewWidth, height: contentsHeight * 0.33)
         expensiveBtn.backgroundColor = .black
         expensiveBtn.addTarget(self, action: #selector(goExpensive(sender:)), for:.touchUpInside)
         expensiveBtn.pageTitleLabel.text = "高級コース"

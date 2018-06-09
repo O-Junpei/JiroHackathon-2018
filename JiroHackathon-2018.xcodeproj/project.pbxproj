@@ -76,13 +76,13 @@
 		8D2EBCE320CB808D00CAC653 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
+		8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
+		8D2EBCED20CBBCED00CAC653 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C806CD2620CBB45A00891920 /* SelecterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecterVC.swift; sourceTree = "<group>"; };
 		C806CD2820CBB46800891920 /* SelecterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecterTableViewCell.swift; sourceTree = "<group>"; };
 		C806CD2A20CBBAD800891920 /* CheapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheapVC.swift; sourceTree = "<group>"; };
 		C806CD2C20CBBAEF00891920 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
 		C806CD2E20CBBB0C00891920 /* ExpensiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensiveVC.swift; sourceTree = "<group>"; };
-		8D2EBCEB20CBB67F00CAC653 /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
-		8D2EBCED20CBBCED00CAC653 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -641,7 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N2NJ9HWB52;
+				DEVELOPMENT_TEAM = 5RH346BQ66;
 				INFOPLIST_FILE = "JiroHackathon-2018/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -660,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N2NJ9HWB52;
+				DEVELOPMENT_TEAM = 5RH346BQ66;
 				INFOPLIST_FILE = "JiroHackathon-2018/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

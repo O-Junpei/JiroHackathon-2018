@@ -15,11 +15,14 @@ class ExpensiveVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "スターター二郎"
+        self.title = "高級二郎"
         
         //Viewの大きさを取得
-        let viewWidth = self.view.frame.size.width
-        let viewHeight = self.view.frame.size.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+        let navigationBarHeight = (self.navigationController?.navigationBar.frame.size.height)!
+        let viewWidth = self.view.frame.width
+        let viewHeight = self.view.frame.height
+        let contentsHeight = viewHeight - statusBarHeight - navigationBarHeight
         
         //テーブルビューの初期化
         starterTableView = UITableView()
@@ -56,6 +59,24 @@ class ExpensiveVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         self.view.addSubview(indicator)
         self.view.bringSubview(toFront: indicator)
         indicator.startAnimating()
+        
+        //購入ボタン
+        let buyButton = BuyButton()
+        buyButton.frame = CGRect(x: 0, y: contentsHeight * 0.9, width: viewWidth, height: contentsHeight * 0.1)
+        buyButton.backgroundColor = UIColor.init(named: "main")
+        buyButton.buyLabel.text = "購入画面"
+        buyButton.addTarget(self, action: #selector(goBuyView(sender:)), for:.touchUpInside)
+        self.view.addSubview(buyButton)
+    }
+    
+    @objc internal func goBuyView(sender: UIButton){
+        let detailVC:DetailVC = DetailVC()
+        detailVC.ninnikuStr = "高級なにんにく"
+        detailVC.yasaiStr = "高級な豚"
+        detailVC.butaStr = "高級な豚"
+        detailVC.syoyuStr = "高級な醤油"
+        detailVC.menStr = "高級な麺"
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,9 +108,5 @@ class ExpensiveVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     //Mark: テーブルビューのセルが押されたら呼ばれる
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let detailVC:DetailVC = DetailVC()
-        self.navigationController?.pushViewController(detailVC, animated: true)
-        
     }
 }

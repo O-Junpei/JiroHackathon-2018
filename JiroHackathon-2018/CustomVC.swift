@@ -50,8 +50,6 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         buyButton.buyLabel.text = "購入画面"
         buyButton.addTarget(self, action: #selector(goBuyView(sender:)), for:.touchUpInside)
         self.view.addSubview(buyButton)
-        
-
     }
     
     @objc internal func goBuyView(sender: UIButton){
