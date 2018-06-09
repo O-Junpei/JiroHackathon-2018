@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  JiroHackathon-2018
-//
-//  Created by junpei ono on 2018/06/09.
-//  Copyright © 2018年 junpei ono. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -15,6 +7,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        //ナビゲーションバー
+        UINavigationBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().barTintColor = UIColor.init(named: "main")
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.black]
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.makeKeyAndVisible()

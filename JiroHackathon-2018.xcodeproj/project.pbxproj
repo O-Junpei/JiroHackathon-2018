@@ -17,6 +17,8 @@
 		8D2EBCCE20CB695A00CAC653 /* JiroHackathon_2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCCD20CB695A00CAC653 /* JiroHackathon_2018UITests.swift */; };
 		8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCDC20CB741E00CAC653 /* TopBtn.swift */; };
 		8D2EBCDF20CB760700CAC653 /* StarterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCDE20CB760700CAC653 /* StarterVC.swift */; };
+		8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */; };
+		8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE320CB808D00CAC653 /* DetailVC.swift */; };
 		C70AA4A2050BEB14000A2956 /* Pods_JiroHackathon_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0691F650844FCA629107C469 /* Pods_JiroHackathon_2018UITests.framework */; };
 		D8ABC0A7035BD60172BC1266 /* Pods_JiroHackathon_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		8D2EBCCF20CB695A00CAC653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2EBCDC20CB741E00CAC653 /* TopBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBtn.swift; sourceTree = "<group>"; };
 		8D2EBCDE20CB760700CAC653 /* StarterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterVC.swift; sourceTree = "<group>"; };
+		8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterTableViewCell.swift; sourceTree = "<group>"; };
+		8D2EBCE320CB808D00CAC653 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +147,8 @@
 			children = (
 				8D2EBCAD20CB695900CAC653 /* AppDelegate.swift */,
 				8D2EBCDB20CB740800CAC653 /* Top */,
-				8D2EBCDE20CB760700CAC653 /* StarterVC.swift */,
+				8D2EBCE520CB810C00CAC653 /* Starter */,
+				8D2EBCE320CB808D00CAC653 /* DetailVC.swift */,
 				8D2EBCB120CB695900CAC653 /* Main.storyboard */,
 				8D2EBCB420CB695A00CAC653 /* Assets.xcassets */,
 				8D2EBCB620CB695A00CAC653 /* LaunchScreen.storyboard */,
@@ -177,6 +182,15 @@
 				8D2EBCDC20CB741E00CAC653 /* TopBtn.swift */,
 			);
 			path = Top;
+			sourceTree = "<group>";
+		};
+		8D2EBCE520CB810C00CAC653 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				8D2EBCDE20CB760700CAC653 /* StarterVC.swift */,
+				8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */,
+			);
+			path = Starter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,8 +386,10 @@
 			files = (
 				8D2EBCDF20CB760700CAC653 /* StarterVC.swift in Sources */,
 				8D2EBCB020CB695900CAC653 /* TopVC.swift in Sources */,
+				8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */,
 				8D2EBCAE20CB695900CAC653 /* AppDelegate.swift in Sources */,
 				8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */,
+				8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

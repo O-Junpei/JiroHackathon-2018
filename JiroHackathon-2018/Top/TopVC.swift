@@ -33,7 +33,8 @@ class TopVC: UIViewController {
     }
     //basicボタンが押されたら呼ばれます
     @objc internal func basicButtonClicked(sender: UIButton){
-        print("basicButtonBtnClicked")
+        let starterVC:StarterVC = StarterVC()
+        self.navigationController?.pushViewController(starterVC, animated: true)        
     }
 
     override func viewWillAppear(_ animated: Bool) {
