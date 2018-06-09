@@ -9,7 +9,7 @@ target 'JiroHackathon-2018' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SCLAlertView'
-
+  pod 'AlamofireImage', '~> 3.3'
 
   target 'JiroHackathon-2018Tests' do
     inherit! :search_paths

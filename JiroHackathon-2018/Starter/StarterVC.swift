@@ -1,6 +1,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
 
 class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
@@ -8,6 +9,9 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     private var starterTableView: UITableView!
     
     var starterData:JSON = []
+    
+    let indicator = UIActivityIndicatorView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +41,22 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             case .success:
                 let json:JSON = JSON(response.result.value ?? kill)
                 print(json)
+                self.indicator.stopAnimating()
                 self.starterData = json["starter_2000"]
                 self.starterTableView.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
+        
+        // UIActivityIndicatorView のスタイルをテンプレートから選択
+        indicator.activityIndicatorViewStyle = .whiteLarge
+        indicator.center = self.view.center
+        indicator.color = UIColor.black
+        indicator.hidesWhenStopped = true
+        self.view.addSubview(indicator)
+        self.view.bringSubview(toFront: indicator)
+        indicator.startAnimating()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +77,11 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         let cell:StarterTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(StarterTableViewCell.self))! as! StarterTableViewCell
         cell.kingakuLabel.text = "¥" + starterData[indexPath.row]["price"].stringValue
         cell.nameLabel.text = starterData[indexPath.row]["name"].stringValue
+        
+        let url = URL(string: starterData[indexPath.row]["image_url"].stringValue)!
+        print(starterData[indexPath.row]["image_url"].stringValue)
+        cell.iconImageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "loading"))
+
         return cell
     }
     

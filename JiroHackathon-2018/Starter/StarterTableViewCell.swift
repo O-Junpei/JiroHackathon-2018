@@ -30,11 +30,11 @@ class StarterTableViewCell: UITableViewCell {
         // height 100
         //timeLabel
         iconImageView.frame = CGRect(x: 8, y: 8, width: height - 16, height: height - 16)
-        iconImageView.image = UIImage(named: "jiro_sample")
+        //iconImageView.image = UIImage(named: "jiro_sample")
         self.addSubview(iconImageView)
         
         //
-        kingakuLabel.frame = CGRect(x: 120, y: 8, width: width - 100, height: 42)
+        kingakuLabel.frame = CGRect(x: 108, y: 8, width: width - 110, height: 42)
         kingakuLabel.font = UIFont.boldSystemFont(ofSize: 42)
         kingakuLabel.textColor = UIColor.black
         //kingakuLabel.text = "¥4500"
@@ -42,10 +42,12 @@ class StarterTableViewCell: UITableViewCell {
         self.addSubview(kingakuLabel)
         
         //
-        nameLabel.frame = CGRect(x: 120, y: 50, width: width - 100, height: 42)
+        nameLabel.frame = CGRect(x: 108, y: 50, width: width - 110, height: 42)
         nameLabel.font = UIFont.boldSystemFont(ofSize: 42)
         nameLabel.textColor = UIColor.black
-        nameLabel.text = "中山二郎風"
+        nameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.minimumScaleFactor = 0.8
+        //nameLabel.text = "中山二郎風"
         nameLabel.textAlignment = NSTextAlignment.left
         self.addSubview(nameLabel)
         
