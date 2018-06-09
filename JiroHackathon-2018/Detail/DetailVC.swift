@@ -1,4 +1,5 @@
 import UIKit
+import SCLAlertView
 
 class DetailVC: UIViewController {
 
@@ -16,10 +17,9 @@ class DetailVC: UIViewController {
         let contentsHeight = viewHeight - statusBarHeight - navigationBarHeight
         
         let ramenImageView = UIImageView()
-        ramenImageView.image = UIImage(named: "jiro_sample")
+        ramenImageView.image = UIImage(named: "nabejiro")
         ramenImageView.frame = CGRect(x: 0, y: 0, width: viewWidth, height: contentsHeight * 0.4)
-        ramenImageView.backgroundColor = .blue
-        ramenImageView.contentMode = .scaleAspectFit
+        ramenImageView.contentMode = .scaleToFill
         self.view.addSubview(ramenImageView)
         
         let priceLabel = UILabel()
@@ -71,9 +71,14 @@ class DetailVC: UIViewController {
         self.view.addSubview(menLabel)
         
         //購入ボタン
-        let buyButton = UIButton()
+        let buyButton = BuyButton()
         buyButton.frame = CGRect(x: 0, y: contentsHeight * 0.9, width: viewWidth, height: contentsHeight * 0.1)
-        buyButton.backgroundColor = .red
+        buyButton.backgroundColor = UIColor.init(named: "main")
+        buyButton.addTarget(self, action: #selector(buy(sender:)), for:.touchUpInside)
         self.view.addSubview(buyButton)
+    }
+    
+    @objc internal func buy(sender: UIButton){
+        SCLAlertView().showSuccess("購入完了", subTitle: "美味しい家二郎を楽しんで！！！")
     }
 }

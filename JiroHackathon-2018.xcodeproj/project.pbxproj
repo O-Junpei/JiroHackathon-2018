@@ -20,6 +20,7 @@
 		8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */; };
 		8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE320CB808D00CAC653 /* DetailVC.swift */; };
 		8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */; };
+		8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */; };
 		C70AA4A2050BEB14000A2956 /* Pods_JiroHackathon_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0691F650844FCA629107C469 /* Pods_JiroHackathon_2018UITests.framework */; };
 		D8ABC0A7035BD60172BC1266 /* Pods_JiroHackathon_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterTableViewCell.swift; sourceTree = "<group>"; };
 		8D2EBCE320CB808D00CAC653 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
+		8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +153,7 @@
 				8D2EBCDB20CB740800CAC653 /* Top */,
 				8D2EBCE520CB810C00CAC653 /* Starter */,
 				8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */,
-				8D2EBCE320CB808D00CAC653 /* DetailVC.swift */,
+				8D2EBCE820CBAB2100CAC653 /* Detail */,
 				8D2EBCB120CB695900CAC653 /* Main.storyboard */,
 				8D2EBCB420CB695A00CAC653 /* Assets.xcassets */,
 				8D2EBCB620CB695A00CAC653 /* LaunchScreen.storyboard */,
@@ -194,6 +196,15 @@
 				8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */,
 			);
 			path = Starter;
+			sourceTree = "<group>";
+		};
+		8D2EBCE820CBAB2100CAC653 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8D2EBCE320CB808D00CAC653 /* DetailVC.swift */,
+				8D2EBCE920CBAB4D00CAC653 /* BuyButton.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +429,7 @@
 				8D2EBCAE20CB695900CAC653 /* AppDelegate.swift in Sources */,
 				8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */,
 				8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */,
+				8D2EBCEA20CBAB4D00CAC653 /* BuyButton.swift in Sources */,
 				8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
