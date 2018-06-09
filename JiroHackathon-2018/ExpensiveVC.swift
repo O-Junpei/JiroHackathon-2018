@@ -42,7 +42,7 @@ class ExpensiveVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 let json:JSON = JSON(response.result.value ?? kill)
                 print(json)
                 self.indicator.stopAnimating()
-                self.starterData = json["starter_2000"]
+                self.starterData = json
                 self.starterTableView.reloadData()
             case .failure(let error):
                 print(error)
