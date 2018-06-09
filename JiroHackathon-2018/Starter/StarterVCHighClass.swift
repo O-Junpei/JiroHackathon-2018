@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 import AlamofireImage
 
-class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class StarterVCHighClass: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     //テーブルビューインスタンス
     private var starterTableView: UITableView!
@@ -34,7 +34,7 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
 
         //お天気APIから東京の天気を取得する
-        let url:String = "https://jirozon.herokuapp.com/starter/list"
+        let url:String = "https://jirozon.herokuapp.com/starter/list?selector=highclass"
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
 
             switch response.result {
