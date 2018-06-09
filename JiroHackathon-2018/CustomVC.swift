@@ -15,10 +15,12 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         self.view.backgroundColor = .white
         self.title = "カスタム二郎"
 
-        
         //Viewの大きさを取得
-        let viewWidth = self.view.frame.size.width
-        let viewHeight = self.view.frame.size.height
+        let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
+        let navigationBarHeight = (self.navigationController?.navigationBar.frame.size.height)!
+        let viewWidth = self.view.frame.width
+        let viewHeight = self.view.frame.height
+        let contentsHeight = viewHeight - statusBarHeight - navigationBarHeight
         
         //テーブルビューの初期化
         syokuzaiTableView = UITableView()
@@ -32,8 +34,22 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         
         //テーブルビューの設置
         syokuzaiTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        syokuzaiTableView.rowHeight = 80
         self.view.addSubview(syokuzaiTableView)
+        
+        //購入ボタン
+        let buyButton = BuyButton()
+        buyButton.frame = CGRect(x: 0, y: contentsHeight * 0.9, width: viewWidth, height: contentsHeight * 0.1)
+        buyButton.backgroundColor = UIColor.init(named: "main")
+        buyButton.buyLabel.text = "購入画面"
+        buyButton.addTarget(self, action: #selector(goBuyView(sender:)), for:.touchUpInside)
+        self.view.addSubview(buyButton)
 
+    }
+    
+    @objc internal func goBuyView(sender: UIButton){
+        let detailVC:DetailVC = DetailVC()
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +68,8 @@ class CustomVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
         //myItems配列の中身をテキストにして登録した
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
         cell.textLabel?.text = self.myItems[indexPath.row]
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
     

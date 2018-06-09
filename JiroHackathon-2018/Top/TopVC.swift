@@ -10,9 +10,7 @@ class TopVC: UIViewController {
 
         viewWidth = self.view.frame.width
         viewHeight = self.view.frame.height
-        
-        //self.view.backgroundColor = UIColor.init(named: "main")
-        
+                
         //スターター二郎
         let starterBtn = TopBtn()
         starterBtn.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight * 0.5)
