@@ -1,9 +1,13 @@
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     //テーブルビューインスタンス
-    private var myTableView: UITableView!
+    private var starterTableView: UITableView!
+    
+    var starterData:JSON = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +19,30 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         let viewHeight = self.view.frame.size.height
         
         //テーブルビューの初期化
-        myTableView = UITableView()
-        myTableView.delegate = self
-        myTableView.dataSource = self
-        myTableView.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
-        myTableView.rowHeight = 100
-        myTableView.register(StarterTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(StarterTableViewCell.self))
+        starterTableView = UITableView()
+        starterTableView.delegate = self
+        starterTableView.dataSource = self
+        starterTableView.frame = CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight)
+        starterTableView.rowHeight = 100
+        starterTableView.register(StarterTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(StarterTableViewCell.self))
 
-        self.view.addSubview(myTableView)
-    
+        self.view.addSubview(starterTableView)
+        
+        
+        //お天気APIから東京の天気を取得する
+        let url:String = "https://jirozon.herokuapp.com/starter/list"
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
+            
+            switch response.result {
+            case .success:
+                let json:JSON = JSON(response.result.value ?? kill)
+                print(json)
+                self.starterData = json["starter_2000"]
+                self.starterTableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,18 +54,22 @@ class StarterVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     //MARK: テーブルビューのセルの数を設定する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //テーブルビューのセルの数はmyItems配列の数とした
-        return 10
+        return starterData.count
     }
     
     //MARK: テーブルビューのセルの中身を設定する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //myItems配列の中身をテキストにして登録した
         let cell:StarterTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(StarterTableViewCell.self))! as! StarterTableViewCell
+        cell.kingakuLabel.text = "¥" + starterData[indexPath.row]["price"].stringValue
+        cell.nameLabel.text = starterData[indexPath.row]["name"].stringValue
         return cell
     }
     
     //Mark: テーブルビューのセルが押されたら呼ばれる
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
         let detailVC:DetailVC = DetailVC()
         self.navigationController?.pushViewController(detailVC, animated: true)
         

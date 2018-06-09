@@ -30,14 +30,14 @@ class StarterTableViewCell: UITableViewCell {
         // height 100
         //timeLabel
         iconImageView.frame = CGRect(x: 8, y: 8, width: height - 16, height: height - 16)
-        iconImageView.image = UIImage(named: "logo")
+        iconImageView.image = UIImage(named: "jiro_sample")
         self.addSubview(iconImageView)
         
         //
         kingakuLabel.frame = CGRect(x: 120, y: 8, width: width - 100, height: 42)
         kingakuLabel.font = UIFont.boldSystemFont(ofSize: 42)
         kingakuLabel.textColor = UIColor.black
-        kingakuLabel.text = "¥4500"
+        //kingakuLabel.text = "¥4500"
         kingakuLabel.textAlignment = NSTextAlignment.left
         self.addSubview(kingakuLabel)
         

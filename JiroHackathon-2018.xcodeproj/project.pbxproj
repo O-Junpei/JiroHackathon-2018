@@ -19,6 +19,7 @@
 		8D2EBCDF20CB760700CAC653 /* StarterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCDE20CB760700CAC653 /* StarterVC.swift */; };
 		8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */; };
 		8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE320CB808D00CAC653 /* DetailVC.swift */; };
+		8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */; };
 		C70AA4A2050BEB14000A2956 /* Pods_JiroHackathon_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0691F650844FCA629107C469 /* Pods_JiroHackathon_2018UITests.framework */; };
 		D8ABC0A7035BD60172BC1266 /* Pods_JiroHackathon_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		8D2EBCDE20CB760700CAC653 /* StarterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterVC.swift; sourceTree = "<group>"; };
 		8D2EBCE020CB7ACB00CAC653 /* StarterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterTableViewCell.swift; sourceTree = "<group>"; };
 		8D2EBCE320CB808D00CAC653 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVC.swift; sourceTree = "<group>"; };
 		CAA6E74E8A5C9126D929AD47 /* Pods_JiroHackathon_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JiroHackathon_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3146C1CB43E087FC7E65F8 /* Pods-JiroHackathon-2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiroHackathon-2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiroHackathon-2018Tests/Pods-JiroHackathon-2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 				8D2EBCAD20CB695900CAC653 /* AppDelegate.swift */,
 				8D2EBCDB20CB740800CAC653 /* Top */,
 				8D2EBCE520CB810C00CAC653 /* Starter */,
+				8D2EBCE620CB9BA500CAC653 /* CustomVC.swift */,
 				8D2EBCE320CB808D00CAC653 /* DetailVC.swift */,
 				8D2EBCB120CB695900CAC653 /* Main.storyboard */,
 				8D2EBCB420CB695A00CAC653 /* Assets.xcassets */,
@@ -204,6 +207,7 @@
 				8D2EBCA620CB695900CAC653 /* Sources */,
 				8D2EBCA720CB695900CAC653 /* Frameworks */,
 				8D2EBCA820CB695900CAC653 /* Resources */,
+				BA328D880903F9FB0339FEB9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +381,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA328D880903F9FB0339FEB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JiroHackathon-2018/Pods-JiroHackathon-2018-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JiroHackathon-2018/Pods-JiroHackathon-2018-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,6 +414,7 @@
 				8D2EBCB020CB695900CAC653 /* TopVC.swift in Sources */,
 				8D2EBCE120CB7ACB00CAC653 /* StarterTableViewCell.swift in Sources */,
 				8D2EBCAE20CB695900CAC653 /* AppDelegate.swift in Sources */,
+				8D2EBCE720CB9BA500CAC653 /* CustomVC.swift in Sources */,
 				8D2EBCDD20CB741E00CAC653 /* TopBtn.swift in Sources */,
 				8D2EBCE420CB808D00CAC653 /* DetailVC.swift in Sources */,
 			);

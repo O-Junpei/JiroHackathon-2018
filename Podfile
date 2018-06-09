@@ -6,6 +6,10 @@ target 'JiroHackathon-2018' do
   use_frameworks!
 
   # Pods for JiroHackathon-2018
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SCLAlertView'
+
 
   target 'JiroHackathon-2018Tests' do
     inherit! :search_paths
